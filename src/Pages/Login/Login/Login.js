@@ -1,10 +1,12 @@
 import React from 'react';
+import useAuth from '../../../Hooks/useAuth';
 
 const Login = () => {
+    const { signInUsingGoogle } = useAuth();
     return (
         <div>
             <h2>Please Log In</h2>
-            <button className="btn btn-warning">Google Sign In</button>
+            <button onClick={signInUsingGoogle} className="btn btn-warning">Google Sign In</button>
         </div>
     );
 };
